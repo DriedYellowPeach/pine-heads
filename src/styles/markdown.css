@@ -1,0 +1,43 @@
+.filetype {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base);
+  background: var(--file-background);
+  /* padding: 0.4rem 1rem 0.8rem; */
+  color: var(--font-color-base);
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  border: 1px solid var(--code-border-color);
+  gap: 0.5rem;
+}
+
+.filetype .fileIcon {
+  display: flex;
+  align-items: center;
+  /* margin-top: -0.4rem; */
+  margin-bottom: -0.2rem;
+  margin-right: 0.5rem;
+  /* font-size: 20px; */
+}
+
+.markdown.codeblock {
+  display: flex;
+  flex-direction: column;
+}
+
+.markdown.codeblock .syntax-highlighter {
+  margin: 0;
+  border: 1px solid var(--code-border-color);
+  border-top: none;
+  max-height: 40rem;
+  overflow: auto;
+}
+
+/* div.container.markdown { */
+/*   padding-top: -1px; */
+/* } */

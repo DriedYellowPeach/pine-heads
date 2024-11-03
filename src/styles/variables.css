@@ -1,0 +1,102 @@
+:root {
+  /* Theme */
+  --green: #229020;
+  --light-yellow: #a87200;
+  --pink: #c52387;
+  --lavender: #a208ba;
+  --blue: #365ccd;
+  --selected-color: var(--light-yellow);
+
+  /* Colors */
+  --gray-0: #f9f9f9;
+  --gray-05: #f6f6f6;
+  --gray-1: #eee;
+  --gray-2: #e6e6e6;
+  --gray-3: #ccc;
+  --gray-4: #bbb;
+  --gray-5: #999;
+  --gray-6: #575757;
+  --gray-65: #525252;
+  --gray-7: #2c2c2c;
+  --gray-8: #252525;
+  --gray-9: #1f1f1f;
+  --gray-10: #181818;
+  --gray-11: #151515;
+  --gray-12: #050505;
+
+  --teal: #005577;
+  --yellow: #fca62a;
+  --orange: #ff7e22;
+  --violet: #ff75f8;
+  --purple: #673ece;
+  --indigo: #4e5dff;
+  --indigo-dark: #431dee;
+  --indigo-light: #a6aaff;
+  --indigo-muted: #c7ccff;
+
+  /* Customize */
+  --navbar-highlight: var(--blue);
+  --footer-highlight: var(--blue);
+  --blog-post-item-color: var(--blue);
+  --input-background-highlight: none;
+  --footer-special-filter: brightness(0) invert(0);
+  --svg-color-filter: invert(11%) sepia(23%) saturate(0%) hue-rotate(147deg)
+    brightness(101%) contrast(100%);
+
+  /* Font family */
+  --font-family-base: "Fira Code";
+  --font-family-monospace: "Fira Code";
+  --font-family-heading: "Fira Code";
+  --font-family-nav: "Fira Code";
+
+  /* Font color */
+  --font-color-base: var(--gray-7);
+  --font-color-muted: var(--gray-6);
+  --font-color-extra-muted: var(--gray-4);
+  --font-color-heading: var(--gray-9);
+  --font-color-heading3: var(--gray-8);
+  --font-color-bright: var(--gray-12);
+
+  /* Borders */
+  --border-color: var(--gray-4);
+  --border-color-hover: var(--gray-4);
+  --border-radius: 12px;
+
+  /* Elements */
+  --new-background: var(--button-background-color);
+  --new-text: var(--font-color-bright);
+  --background-color: var(--gray-2);
+  --navbar-background-color: var(--gray-0);
+  --card-background-color: var(--gray-0);
+  --button-border-color-hover: var(--gray-5);
+  --button-border-color: var(--gray-4);
+  --button-background-color: var(--gray-05);
+  --marker: var(--border-color-hover);
+  --link: var(--primary-color);
+  --link-color-hover: white;
+  --post-color-hover: var(--primary-color);
+  --navbar: var(--gray-1);
+  --navbar-border: var(--gray-2);
+  --navbar-color: var(--gray-8);
+  --navbar-color-hover: var(--gray-9);
+  --navbar-background-hover: var(--gray-1);
+  --star: var(--yellow);
+  --post-time-color: var(--gray-6);
+  --card-time-color: var(--primary-color);
+  --highlight-color: var(--yellow);
+  --blockquote-border-color: VAR(--gray-5);
+  --blockquote-background: rgba(0, 0, 0, 0.05);
+  --file-background: #eee;
+  --inline-code-background-color: rgba(0, 0, 0, 0.1);
+  --category-link: #dd4eb2;
+  --scrollbar-color: var(--gray-3);
+  --scrollbar-track: var(--gray-4);
+
+  /* Sizs */
+  --content-width: 960px;
+  --content-width--small: 560px;
+  --content-width--medium: 700px;
+  --navbar-height-small: 60px;
+
+  --primary-color: var(--selected-color);
+}

@@ -1,0 +1,27 @@
+/*
+--- * `MiniIconsAzure`  - azure.
+--- * `MiniIconsBlue`   - blue.
+--- * `MiniIconsCyan`   - cyan.
+--- * `MiniIconsGreen`  - green.
+--- * `MiniIconsGrey`   - grey.
+--- * `MiniIconsOrange` - orange.
+--- * `MiniIconsPurple` - purple.
+--- * `MiniIconsRed`    - red.
+--- * `MiniIconsYellow` - yellow.
+*/
+.code-block-title {
+  --highlight-azure: #0db9d7;
+  --highlight-blue: #7aa2f7;
+  --highlight-cyan: #1abc9c;
+  --highlight-green: #9ece6a;
+  --highlight-grey: #c0caf5;
+  --highlight-orange: #ff9e64;
+  --highlight-purple: #9d7cd8;
+  --highlight-red: #f7768e;
+  --highlight-yellow: #e0af68;
+}
+span.code-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

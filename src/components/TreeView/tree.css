@@ -1,0 +1,36 @@
+ul,
+#myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+}
+
+.box {
+  cursor: pointer;
+  user-select: none;
+}
+
+.box::before {
+  content: "\2610";
+  color: black;
+  display: inline-block;
+  font-size: inherit;
+  margin-right: 6px;
+}
+
+.check-box::before {
+  content: "\2611";
+  color: dodgerblue;
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}

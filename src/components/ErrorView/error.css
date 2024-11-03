@@ -1,0 +1,85 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --error-color: #db4b4b;
+  --warning-color: #e0af68;
+}
+
+li.root {
+  list-style: none;
+}
+
+li .child {
+  list-style-type: disc;
+  color: var(--warning-color);
+  font-size: 1.15rem;
+}
+
+.error-container h1 {
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  /* padding-left: 3rem; */
+  color: var(--error-color);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.box {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.box::before {
+  content: "\2610";
+  color: var(--error-color);
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.check-box::before {
+  content: "\2611";
+}
+
+.error-container h5 span {
+  font-weight: 800;
+  color: var(--warning-color);
+}
+
+.error-container h5 {
+  max-width: 40rem;
+  font-weight: 400;
+  /* text-align: center; */
+}
+
+ul.tree {
+  width: 80vw;
+}
+
+@media screen and (max-width: 700px) {
+  img.error-page {
+    max-width: 325px;
+    max-height: auto;
+  }
+
+  h1.root {
+    font-size: 0.9rem;
+  }
+
+  h5.node {
+    font-size: 0.8rem;
+  }
+
+  ul.tree {
+    width: 90vw;
+  }
+}
