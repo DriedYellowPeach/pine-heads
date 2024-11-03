@@ -44,6 +44,7 @@ const router = createBrowserRouter([
         element: <Error msg="Don't panic, this error is intentional" />,
       },
       { path: "loading", element: <Loading /> },
+      { path: "loading2", element: <Loading delay={10000} /> },
       { path: "*", element: <NotFoundWrapper /> },
     ],
   },

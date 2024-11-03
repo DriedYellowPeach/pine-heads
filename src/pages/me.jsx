@@ -21,6 +21,12 @@ const Me = () => {
 
             <li>
               <h5>
+                <Link to="/loading2">Loading Demo(smooth in)</Link>
+              </h5>
+            </li>
+
+            <li>
+              <h5>
                 <Link to="/notfound">Not Found Demo</Link>
               </h5>
             </li>

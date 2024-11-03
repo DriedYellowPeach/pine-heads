@@ -9,8 +9,8 @@
 
 .loading.empty-container {
   display: flex;
-  margin-top: 45vh;
-  margin-bottom: 45vh;
+  height: 90vh;
+  height: calc(var(90, 1vh) * 100);
 }
 
 .loading-container h1 {
