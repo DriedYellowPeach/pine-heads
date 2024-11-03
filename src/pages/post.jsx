@@ -4,14 +4,14 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 import MarkdownRenderer from "../components/MarkdownRender";
-import Loading from "../components/LoadingView/Loading";
 import Error from "../components/ErrorView/ErrorPage";
+import LoadingWrapper from "../components/LoadingView/LoadingWrapper";
 
 import endpoints from "../constants/endpoints";
 
 const Post = () => {
   const { slug } = useParams();
-  const [post, setPost] = useState(null);
+  const [post, setPost] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -22,12 +22,11 @@ const Post = () => {
         const response = await axios.get(`${endpoints.getPostBySlug(slug)}`);
         setPost(response.data);
       } catch (err) {
-        // console.log(Object.keys(err));
         setError(err);
       } finally {
         // setTimeout(() => {
         //   setLoading(false);
-        // }, 30000);
+        // }, 200);
         setLoading(false);
       }
     };
@@ -35,7 +34,6 @@ const Post = () => {
     fetchPost();
   }, [slug]);
 
-  if (loading) return <Loading />;
   if (error && error.response) {
     return (
       <Error
@@ -45,12 +43,17 @@ const Post = () => {
       />
     );
   }
-  if (!post) return <Error msg={"There is no such post"} />;
 
+  // TEST:
+  // PRESET: 1 150 8000, will enter stage 0 - 2: enter directly, no flash, this is the most common situation
+  // PRESET: 9000 8000 8000, will enter stage 0 - 1 - 2: and stay in each very long
+  // PRODUCTION: 0 150 300, the most natural way
   return (
-    <div>
-      <MarkdownRenderer markdown={post.content}></MarkdownRenderer>
-    </div>
+    <LoadingWrapper isLoading={loading} threshold={150} minDisplayTime={300}>
+      <div>
+        <MarkdownRenderer markdown={post.content}></MarkdownRenderer>
+      </div>
+    </LoadingWrapper>
   );
 };
 
