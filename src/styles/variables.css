@@ -39,6 +39,7 @@
   --footer-highlight: var(--blue);
   --blog-post-item-color: var(--blue);
   --input-background-highlight: none;
+  --code-border-color: var(--gray-65);
   --footer-special-filter: brightness(0) invert(0);
   --svg-color-filter: invert(11%) sepia(23%) saturate(0%) hue-rotate(147deg)
     brightness(101%) contrast(100%);

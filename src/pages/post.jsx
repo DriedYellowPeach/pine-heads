@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
-import MarkdownRenderer from "../components/MarkdownRender";
+import MarkdownRenderer from "../components/markdown/MarkdownRender";
 import Error from "../components/ErrorView/ErrorPage";
 import LoadingWrapper from "../components/LoadingView/LoadingWrapper";
 
@@ -51,7 +51,11 @@ const Post = () => {
   return (
     <LoadingWrapper isLoading={loading} threshold={150} minDisplayTime={300}>
       <div>
-        <MarkdownRenderer markdown={post.content}></MarkdownRenderer>
+        <MarkdownRenderer
+          markdown={post.content}
+          slug={post.slug}
+          title={post.title}
+        ></MarkdownRenderer>
       </div>
     </LoadingWrapper>
   );

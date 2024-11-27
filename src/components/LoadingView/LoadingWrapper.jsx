@@ -32,10 +32,10 @@ function LoadingWrapper({ isLoading, children, threshold, minDisplayTime }) {
       }
     }
 
+    // NOTE:
     // stage 0: empty page, smooth in
     // stage 1: spinner
     // stage 2: children
-
     if (stage === 0 && showSpinner) {
       setStage(1);
     }
@@ -52,7 +52,7 @@ function LoadingWrapper({ isLoading, children, threshold, minDisplayTime }) {
       clearTimeout(loadingTimeout);
       clearTimeout(minDisplayTimeout);
     };
-  }, [isLoading, showSpinner, mayFinish]);
+  }, [isLoading, showSpinner, mayFinish, minDisplayTime, stage, threshold]);
 
   if (stage === 0) {
     return (

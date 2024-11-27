@@ -70,7 +70,9 @@ const Error = ({
     <main>
       <div className="error-container">
         {showErrorImage({ status })}
-        <TreeLike root="Sorry, Something is wrong..." nodes={info} />
+        <div className="error-info">
+          <TreeLike root="Sorry, Something is wrong..." nodes={info} />
+        </div>
       </div>
     </main>
   );

@@ -194,7 +194,7 @@ h2 {
   margin: 0 0 1rem;
   font-weight: 700;
   padding-bottom: 0.4rem;
-  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--border-color);
   font-family: var(--font-family-nav);
   color: var(--font-color-heading);
 }
@@ -296,8 +296,8 @@ main {
 
 @media screen and (min-width: 700px) {
   main {
-    padding-top: 3rem;
-    margin-top: 6rem;
+    padding-top: 2rem;
+    margin-top: 3rem;
   }
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* text-align: center; */
   --error-color: #db4b4b;
   --warning-color: #e0af68;
 }
@@ -14,6 +15,8 @@ li .child {
   list-style-type: disc;
   color: var(--warning-color);
   font-size: 1.15rem;
+  padding: 0;
+  margin: 0 auto; /* Centers the inline list relative to the parent container */
 }
 
 .error-container h1 {
@@ -21,6 +24,11 @@ li .child {
   margin-bottom: 1rem;
   /* padding-left: 3rem; */
   color: var(--error-color);
+}
+
+div.error-info {
+  margin-top: 2rem;
+  max-width: 40rem;
 }
 
 .nested {
