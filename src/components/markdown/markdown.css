@@ -41,7 +41,7 @@
   margin: 0;
   border: 1px solid var(--code-border-color);
   border-top: none;
-  max-height: 40rem;
+  max-height: 50rem;
   overflow: auto;
 }
 

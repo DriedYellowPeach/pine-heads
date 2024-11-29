@@ -1,8 +1,3 @@
-// import {
-//   BrowserRouter as Router,
-//   ScrollRestoration,
-// } from "react-router-dom";
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -55,32 +50,3 @@ function App() {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         <ScrollRestoration />
-//         <Navbar />
-//         <Routes>
-//           <Route path="/" element={<Me />} />
-//           <Route path="/blogs" element={<Blog />} />
-//           <Route path="/notes" element={<Note />} />
-//           <Route path="/projects" element={<Project />} />
-//           <Route path="/me" element={<Me />} />
-//           <Route path="/posts/:slug" element={<Post />} />
-//           {/* Path Below is for test */}
-//           <Route
-//             path="/internal_error"
-//             element={<Error msg={"Don't panic, this error is intentional"} />}
-//           />
-//           <Route path="/loading" element={<Loading />} />
-//           <Route path="*" element={<NotFoundWrapper />} />
-//         </Routes>
-//         <Footer />
-//       </div>
-//     </Router>
-//   );
-// }
-//
-// export default App;
