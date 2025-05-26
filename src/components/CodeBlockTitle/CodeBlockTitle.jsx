@@ -16,6 +16,7 @@ const programmingLangs = {
   bash: { className: "nf-seti-shell", highlight: "green" },
   sql: { className: "nf-md-language_sql", highlight: "orange" },
   lua: { className: "nf-md-language_lua", highlight: "azure" },
+  wgsl: { className: "nf-md-alpha_w", highlight: "azure" },
 
   default: { className: "nf-fa-code", highlight: "blue" },
   // Add more languages as needed
