@@ -18,8 +18,8 @@ const sunAnimeIcon = ImportAllImages(
 
 const navEntries = [
   { url: "/blogs", label: "Blogs" },
-  { url: "/notes", label: "Notes" },
-  { url: "/projects", label: "Projects" },
+  // { url: "/notes", label: "Notes" },
+  // { url: "/projects", label: "Projects" },
   { url: "/me", label: "Me" },
 ];
 

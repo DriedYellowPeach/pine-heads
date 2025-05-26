@@ -29,7 +29,7 @@ const CodeBlockTitle = ({ language }) => {
   return (
     <span
       className="code-block-title"
-      style={{ color: `var(--highlight-${lang.highlight}` }}
+      style={{ color: `var(--highlight-${lang.highlight}`, margin: "auto" }}
     >
       <i className={"nf " + lang.className}></i>
       {language}

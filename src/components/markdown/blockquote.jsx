@@ -18,6 +18,10 @@ export function rehypeBlockquotePlugin() {
           type = "important";
         } else if (textContent.startsWith("[!ERROR]")) {
           type = "error";
+        } else if (textContent.startsWith("[!QUESTION]")) {
+          type = "question";
+        } else if (textContent.startsWith("[!TIP]")) {
+          type = "tip";
         } else {
           type = "default";
         }
@@ -44,6 +48,8 @@ const NerdFontIcons = {
   important: "nf-fa-flag",
   error: "nf-cod-error_small",
   default: "nf-cod-quote",
+  question: "nf-md-head_question_outline",
+  tip: "nf-oct-light_bulb",
 };
 
 // Render the blockquote with custom styles and icons
@@ -51,7 +57,15 @@ export const BlockquoteRenderer = ({ children, className }) => {
   const type = className
     ?.split(" ")
     .find((cls) =>
-      ["note", "warning", "important", "error", "default"].includes(cls),
+      [
+        "note",
+        "warning",
+        "important",
+        "error",
+        "question",
+        "default",
+        "tip",
+      ].includes(cls),
     );
   const iconClassNames = `nf ${NerdFontIcons[type]}`;
   const iconColor = `var(--blockquote-${type}-color`;

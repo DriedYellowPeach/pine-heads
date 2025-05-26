@@ -1,0 +1,83 @@
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.drawing-pads {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.drawing-canvas {
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.pad-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drawing-pads p.title {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.drawing-pads button {
+  margin-top: 30px;
+}
+
+.pad-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pad-res {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* Safer, for wider compatibility */
+  overflow: hidden;
+  width: 150px;
+  height: 280px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.clear-button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.preview-section {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.preview-image {
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.num {
+  color: var(--navbar-highlight);
+}

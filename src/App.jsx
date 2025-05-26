@@ -15,6 +15,7 @@ import NotFoundWrapper from "./pages/NotFoundWarpper";
 
 import Error from "./components/ErrorView/ErrorPage";
 import Loading from "./components/LoadingView/Loading";
+import CanvasWrapper from "./pages/canvas";
 
 const router = createBrowserRouter([
   {
@@ -35,11 +36,17 @@ const router = createBrowserRouter([
       { path: "me", element: <Me /> },
       { path: "posts/:slug", element: <Post /> },
       {
-        path: "internal_error",
-        element: <Error msg="Don't panic, this error is intentional" />,
+        path: "playground",
+        children: [
+          { path: "canvas", element: <CanvasWrapper /> },
+          { path: "loading", element: <Loading /> },
+          { path: "loading2", element: <Loading delay={10000} /> },
+          {
+            path: "internal_error",
+            element: <Error msg="Don't panic, this error is intentional" />,
+          },
+        ],
       },
-      { path: "loading", element: <Loading /> },
-      { path: "loading2", element: <Loading delay={10000} /> },
       { path: "*", element: <NotFoundWrapper /> },
     ],
   },

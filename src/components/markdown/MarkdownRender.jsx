@@ -4,10 +4,18 @@ import rehypeRaw from "rehype-raw";
 import rehypeRewrite from "rehype-rewrite";
 import { visit } from "unist-util-visit";
 import remarkGfm from "remark-gfm";
+import remarkSlug from "remark-slug";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 import "./markdown.css";
+import "katex/dist/katex.min.css";
 import endpoints from "../../constants/endpoints";
 import createCodeBlockRender from "./CodeBlockRender";
+import {
+  createH2Render as H2Render,
+  createH3Render as H3Render,
+} from "./Header";
 import { rehypeBlockquotePlugin, BlockquoteRenderer } from "./blockquote";
 
 function rehypeWrapImageInContainer() {
@@ -17,11 +25,10 @@ function rehypeWrapImageInContainer() {
         // Create a new container element
         const container = {
           type: "element",
-          tagName: "div",
+          tagName: "span",
           properties: { className: ["image-container"] },
           children: [node], // Place the image as a child of the container
         };
-
         // Replace the image node with the container
         parent.children[index] = container;
       }
@@ -63,19 +70,20 @@ const MarkdownRenderer = ({ markdown, slug, title }) => {
           <h1>{title}</h1>
         </div>
         <Markdown
-          remarkPlugins={[remarkGfm]}
+          remarkPlugins={[remarkGfm, remarkSlug, remarkMath]}
           rehypePlugins={[
             rehypeRaw,
             redirectPlugin,
             rehypeWrapImageInContainer,
             rehypeBlockquotePlugin,
+            rehypeKatex,
           ]}
           components={{
+            h2: H2Render,
+            h3: H3Render,
             blockquote: BlockquoteRenderer,
             code: createCodeBlockRender(theme),
             input({ node, ...props }) {
-              console.log(node);
-              console.log(props);
               if (props.checked) {
                 return (
                   <input type="checkbox" {...props} disabled={false} readOnly />

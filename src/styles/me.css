@@ -1,3 +1,30 @@
 a:hover {
   color: var(--font-color-bright);
 }
+
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  text-align: justify;
+  margin: 1rem;
+  /* hyphens: auto; */
+}
+
+.right {
+  margin: 0.5rem;
+  height: 200px;
+  width: auto;
+  border-radius: 5px;
+  border: 1px dashed var(--font-color-base);
+}
+
+.sep {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1.8px dashed var(--navbar-highlight);
+}

@@ -6,6 +6,7 @@ const endpoints = {
   getPostBySlug: (slug) => `${API_URL}/posts/slug/${slug}`,
   getPostsCount: `${API_URL}/posts/count`,
   createPost: `${API_URL}/posts`,
+  predictDigit: `${API_URL}/playground/digit_recognition`,
 };
 
 export default endpoints;

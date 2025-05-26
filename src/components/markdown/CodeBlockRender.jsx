@@ -2,6 +2,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import CodeBlockTitle from "../CodeBlockTitle/CodeBlockTitle";
+import React, { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 function createCodeBlockRender(theme) {
   return function CodeBlockRender({
@@ -16,6 +18,9 @@ function createCodeBlockRender(theme) {
       <div className="markdown codeblock">
         <div className="filetype">
           <CodeBlockTitle language={match[1]} />
+          <CopyToClipboard text={String(children).replace(/\n$/, "")}>
+            <i className="nf nf-oct-copy action-copy scale-on-click"></i>
+          </CopyToClipboard>
         </div>
         <SyntaxHighlighter
           style={theme === "dark" ? oneDark : oneLight}
