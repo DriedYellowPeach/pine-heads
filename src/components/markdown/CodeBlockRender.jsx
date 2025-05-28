@@ -25,7 +25,8 @@ function createCodeBlockRender(theme) {
         <SyntaxHighlighter
           style={theme === "dark" ? oneDark : oneLight}
           PreTag="div"
-          language={match[1]}
+          // HACK: seems syntax highlighter not support wgsl
+          language={match[1] === "wgsl" ? "glsl" : match[1]}
           showLineNumbers={true}
           className={"syntax-highlighter"}
           customStyle={{
